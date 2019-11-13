@@ -10,9 +10,10 @@ import java.util.Random;
  *
  * @author Naubyra (Naufal Ammar K3518047)
  */
-public class Pengurangan {
-    private int A, B;
+public class Pengurangan extends User{
+    private Integer A, B;
     public int hasil;
+    private String teksA, teksB;
     Random rand = new Random();
     
     public void randomSoal() {
@@ -20,25 +21,61 @@ public class Pengurangan {
             case 1: // Random number dari 0 - 10
                 A = rand.nextInt(11);
                 B = rand.nextInt(11);
+                if (A < 0) {
+                    teksA = "(" + A.toString() + ")";
+                }
+                else {
+                    teksA = A.toString();
+                }
+                if (B < 0) {
+                    teksB = "(" + B.toString() + ")";
+                }
+                else {
+                    teksB = B.toString();
+                }
                 if (B > A) {
-                    System.out.println("Berapakah hasil dari " + B + " - " + A + " ?");
+                    System.out.println("Berapakah hasil dari " + teksB + " - " + teksA + " ?");
                     hasil = B - A;
                 }
                 else {
-                    System.out.println("Berapakah hasil dari " + A + " - " + B + " ?");
+                    System.out.println("Berapakah hasil dari " + teksA + " - " + teksB + " ?");
                     hasil = A - B;
                 }
                 break;
             case 2: // Random number dari -10 - (-1)
                 A = -10 + rand.nextInt(10);
                 B = -10 + rand.nextInt(10);
-                System.out.println("Berapakah hasil dari " + A + " - " + B + " ?");
+                if (A < 0) {
+                    teksA = "(" + A.toString() + ")";
+                }
+                else {
+                    teksA = A.toString();
+                }
+                if (B < 0) {
+                    teksB = "(" + B.toString() + ")";
+                }
+                else {
+                    teksB = B.toString();
+                }
+                System.out.println("Berapakah hasil dari " + teksA + " - " + teksB + " ?");
                 hasil = A - B;
                 break;
             case 3: // Random number dari -10 - 10
                 A = -10 + rand.nextInt(21);
                 B = -10 + rand.nextInt(21);
-                System.out.println("Berapakah hasil dari " + A + " - " + B + " ?");
+                if (A < 0) {
+                    teksA = "(" + A.toString() + ")";
+                }
+                else {
+                    teksA = A.toString();
+                }
+                if (B < 0) {
+                    teksB = "(" + B.toString() + ")";
+                }
+                else {
+                    teksB = B.toString();
+                }
+                System.out.println("Berapakah hasil dari " + teksA + " - " + teksB + " ?");
                 hasil = A - B;
                 break;
             default:
