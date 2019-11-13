@@ -8,7 +8,7 @@ import java.util.Random;
 
 /**
  *
- * @author Naubyra (Naufal Ammar)
+ * @author Naubyra (Naufal Ammar K3518047)
  */
 public class Pengurangan {
     private int A, B;
