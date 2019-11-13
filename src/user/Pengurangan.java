@@ -21,20 +21,24 @@ public class Pengurangan {
                 A = rand.nextInt(11);
                 B = rand.nextInt(11);
                 if (B > A) {
+                    System.out.println("Berapakah hasil dari " + B + " - " + A + " ?");
                     hasil = B - A;
                 }
                 else {
+                    System.out.println("Berapakah hasil dari " + A + " - " + B + " ?");
                     hasil = A - B;
                 }
                 break;
-            case 2:
+            case 2: // Random number dari -10 - (-1)
                 A = -10 + rand.nextInt(10);
                 B = -10 + rand.nextInt(10);
+                System.out.println("Berapakah hasil dari " + A + " - " + B + " ?");
                 hasil = A - B;
                 break;
-            case 3:
+            case 3: // Random number dari -10 - 10
                 A = -10 + rand.nextInt(21);
                 B = -10 + rand.nextInt(21);
+                System.out.println("Berapakah hasil dari " + A + " - " + B + " ?");
                 hasil = A - B;
                 break;
             default:
