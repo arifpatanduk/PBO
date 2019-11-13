@@ -21,24 +21,12 @@ public class Pengurangan extends User{
             case 1: // Random number dari 0 - 10
                 A = rand.nextInt(11);
                 B = rand.nextInt(11);
-                if (A < 0) {
-                    teksA = "(" + A.toString() + ")";
-                }
-                else {
-                    teksA = A.toString();
-                }
-                if (B < 0) {
-                    teksB = "(" + B.toString() + ")";
-                }
-                else {
-                    teksB = B.toString();
-                }
                 if (B > A) {
-                    System.out.println("Berapakah hasil dari " + teksB + " - " + teksA + " ?");
+                    System.out.println("Berapakah hasil dari " + B + " - " + A + " ?");
                     hasil = B - A;
                 }
                 else {
-                    System.out.println("Berapakah hasil dari " + teksA + " - " + teksB + " ?");
+                    System.out.println("Berapakah hasil dari " + A + " - " + B + " ?");
                     hasil = A - B;
                 }
                 break;
