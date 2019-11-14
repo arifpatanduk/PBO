@@ -88,9 +88,4 @@ public class Pengurangan extends User{
             hasil = A - B;
         }
     }
-    
-    public static void main(String[] args) {
-        Pengurangan p = new Pengurangan();
-        p.randomSoal();
-    }
 }
