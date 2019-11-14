@@ -16,58 +16,80 @@ public class Pengurangan extends User{
     private String teksA, teksB;
     Random rand = new Random();
     
-    public void randomSoal() {
-        switch (level) {
-            case 1: // Random number dari 0 - 10
+    public void setAngkaA() {
+        switch (Level) {
+            case 1:
                 A = rand.nextInt(11);
-                B = rand.nextInt(11);
-                if (B > A) {
-                    System.out.println("Berapakah hasil dari " + B + " - " + A + " ?");
-                    hasil = B - A;
-                }
-                else {
-                    System.out.println("Berapakah hasil dari " + A + " - " + B + " ?");
-                    hasil = A - B;
-                }
                 break;
-            case 2: // Random number dari -10 - (-1)
+            case 2:
                 A = -10 + rand.nextInt(10);
-                B = -10 + rand.nextInt(10);
-                if (A < 0) {
-                    teksA = "(" + A.toString() + ")";
-                }
-                else {
-                    teksA = A.toString();
-                }
-                if (B < 0) {
-                    teksB = "(" + B.toString() + ")";
-                }
-                else {
-                    teksB = B.toString();
-                }
-                System.out.println("Berapakah hasil dari " + teksA + " - " + teksB + " ?");
-                hasil = A - B;
                 break;
-            case 3: // Random number dari -10 - 10
+            case 3:
                 A = -10 + rand.nextInt(21);
-                B = -10 + rand.nextInt(21);
-                if (A < 0) {
-                    teksA = "(" + A.toString() + ")";
-                }
-                else {
-                    teksA = A.toString();
-                }
-                if (B < 0) {
-                    teksB = "(" + B.toString() + ")";
-                }
-                else {
-                    teksB = B.toString();
-                }
-                System.out.println("Berapakah hasil dari " + teksA + " - " + teksB + " ?");
-                hasil = A - B;
                 break;
             default:
                 break;
+        }
+    }
+    
+    public void setAngkaB() {
+        switch (Level) {
+            case 1:
+                B = rand.nextInt(11);
+                break;
+            case 2:
+                B = -10 + rand.nextInt(10);
+                break;
+            case 3:
+                B = -10 + rand.nextInt(21);
+                break;
+            default:
+                break;
+        }
+    }
+    
+    public int getAngkaA() {
+        return A;
+    }
+    
+    public int getAngkaB() {
+        return B;
+    }
+    
+    public String getTeksA() {
+        if (A < 0) {
+           teksA = "(" + A.toString() + ")";
+        }
+        else {
+           teksA = A.toString();
+        }
+        return teksA;
+    }
+    
+    public String getTeksB() {
+        if (B < 0) {
+           teksB = "(" + B.toString() + ")";
+        }
+        else {
+           teksB = B.toString();
+        }
+        return teksB;
+    }
+    
+    public void randomSoal() {
+        this.setAngkaA();
+        this.setAngkaB();
+        this.getAngkaA();
+        this.getAngkaB();
+        this.getTeksA();
+        this.getTeksB();
+        if (Level == 1 && A < B) {
+            System.out.println("Berapakah hasil dari " + B + " - " + A + " ?");
+            hasil = B - A;
+        }
+        else {
+            System.out.println("Berapakah hasil dari " + A + " - " + B + " ?");
+            hasil = A - B;
         }
     }
 }
