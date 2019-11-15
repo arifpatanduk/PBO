@@ -11,8 +11,9 @@ package user;
  */
 public class Test {
     public static void main(String[] args) {
-        Penjumlahan angka = new Penjumlahan();
+        Pengurangan angka = new Pengurangan();
         angka.Level = 3;
         angka.randomSoal();
+        System.out.println(angka.soalA - angka.soalB);
     }        
 }
